@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Toggler</title>
+<style>
+  body {
+    transition: background-color 0.5s ease;
+    background-color: aqua;
+  }
+  .container {
+    text-align: center;
+    padding: 50px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <button onclick="toggleColor()">Toggle Color</button>
+</div>
+
+<script>
+  function toggleColor() {
+    var body = document.querySelector('body');
+    var currentColor = body.style.backgroundColor;
+    if (currentColor === 'aqua' || currentColor === 'blue') {
+      body.style.backgroundColor = 'black';
+    } else {
+      body.style.backgroundColor = 'blue';
+    }
+  }
+</script>
+
+</body>
+</html>
